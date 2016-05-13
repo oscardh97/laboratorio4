@@ -5,6 +5,7 @@
 using namespace std;
 
 double* factorizar(int*, int);
+void jugar(char*);
 int main(int argc, char const *argv[]){
 	int opcion;
 	cout << "Ingrese el numero del ejercicio";
@@ -23,17 +24,6 @@ int main(int argc, char const *argv[]){
 		char* palabra = new char[35];
 		cout << "Ingrese una palabra menor a 35";
 		cin >> palabra;
-		std::string str (palabra);
-		cout << palabra << "é" << endl;
-		int tamanio = str.length();
-		for(int LETRA = 0; LETRA < tamanio - 2; LETRA++){
-			cout << palabra[LETRA];
-		}
-		cout << endl << (palabra[tamanio - 2] == 'a' ? "e" : "í") <<endl;
-		for(int LETRA = 0; LETRA < tamanio - 2; LETRA++){
-			cout << palabra[LETRA];
-		}
-		cout << "o" <<endl;
 	}
 	return 0;
 }
@@ -44,10 +34,17 @@ double* factorizar(int* polinomio, int sizeArreglo){
 	valores[1] = (double)(-polinomio[1] - raiz) / (2 * polinomio[0]);
 	return valores;
 }
-// int* decimalAFraccion(double numero){
-// 	int* fraccion = new int[2];
-// 	int denominador = 2;
-// 	while(true){
-// 		if((numero * denominador) % )
-// 	}
-// }
+void conjugar(char* palabra){
+
+	std::string str (palabra);
+	cout << palabra << "é" << endl;
+	int tamanio = str.length();
+	for(int LETRA = 0; LETRA < tamanio - 2; LETRA++){
+		cout << palabra[LETRA];
+	}
+	cout << endl << (palabra[tamanio - 2] == 'a' ? "e" : "í") <<endl;
+	for(int LETRA = 0; LETRA < tamanio - 2; LETRA++){
+		cout << palabra[LETRA];
+	}
+	cout << "o" <<endl;
+}
